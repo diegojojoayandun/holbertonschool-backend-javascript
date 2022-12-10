@@ -38,7 +38,7 @@ class Teacher implements TeacherInterface {
     return "Getting to work";
   }
 }
-// Task6 -Creating functions specific to employees
+
 const createEmployee = (salary: number | string): Director | Teacher => {
   if (typeof salary === "number" && salary < 500) return new Teacher();
   return new Director();
@@ -52,7 +52,7 @@ function isFish(pet: Fish | Bird): pet is Fish {
 La sentencia pet is Fish es de tipo booleano en este ejemplo. La instrucción booleana tiene el formato parameterName is Type, donde el nombre del parámetro  parameterName debe ser de la firma de la función del tipo actual.
 
 Cada vez que se llama a la función con una isFishvariable , TypeScript limitará esa variable a su tipo, el tipo dado si el tipo original es compatible.*/
-
+// Task6 -Creating functions specific to employees
 const isDirector = (employee: Director | Teacher): employee is Director => {
   return employee instanceof Director;
 };
@@ -63,7 +63,7 @@ const executeWork = (employee: Director | Teacher): string => {
     : employee.workTeacherTasks();
 };
 
-//task7 - string literal type: https://www.geeksforgeeks.org/what-are-string-literal-types-in-tpescript/#:~:text=The%20string%20literal%20type%20allows,by%20the%20string%20literal%20type.
+//task7 - string literal type: https://www.geeksforgeeks.org/what-are-sltring-literal-types-in-tpescript/#:~:text=The%20string%20literal%20type%20allows,by%20the%20string%20litera%20type.
 
 type Subjects = "Math" | "History";
 
